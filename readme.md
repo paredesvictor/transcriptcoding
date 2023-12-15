@@ -10,4 +10,4 @@ Afer cloning this directory:
 
 install all dependencies with ```pip install -r Requirements.txt```
 
-and execute the code ```python3 ./src/transcriptcoding/__main__.py```.
+and execute the code ```python3 ./src/transcriptcoding/app.py```.
