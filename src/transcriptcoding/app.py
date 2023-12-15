@@ -1,5 +1,5 @@
 """
-Code trancripts from directed interviews in a CSV format
+Code trancripts from guided interviews in a CSV format
 """
 import os
 import csv
@@ -100,13 +100,18 @@ class Coder(toga.App):
         )
 
     def set_data(self, *handler):
+        # Read CSV file to code
         path_to_file = handler[1]
         if not path_to_file:
             self.quit()
         parent = path_to_file.parent
         stem = path_to_file.stem
         with open(path_to_file, "r", newline="") as csvfile:
-            reader = csv.reader(csvfile)
+            # Detect delimiters
+            self.dialect = csv.Sniffer().sniff(csvfile.read(1024), delimiters=";,")
+            csvfile.seek(0)
+            # Read rows and store various data
+            reader = csv.reader(csvfile, self.dialect)
             self.questions = reader.__next__()[1:]
             self.part_ID = []
             self.answers = {}
@@ -116,10 +121,11 @@ class Coder(toga.App):
                 self.answers[row[0]] = row[1:]
                 self.code[row[0]] = ["" for e in row[1:]]
 
+        # Read coded CSV file if it exists
         self.code_file_name = os.path.join(parent, f"{stem}_codes.csv")
         if os.path.exists(self.code_file_name):
             with open(self.code_file_name, "r") as csvfile:
-                reader = csv.reader(csvfile)
+                reader = csv.reader(csvfile, self.dialect)
                 for i, row in enumerate(reader):
                     if i != 0:
                         self.code[self.part_ID[i - 1]] = row[1:]
@@ -174,7 +180,7 @@ class Coder(toga.App):
 
     def save(self, *args):
         with open(self.code_file_name, "w", newline="") as csvfile:
-            writer = csv.writer(csvfile)
+            writer = csv.writer(csvfile, self.dialect)
             writer.writerow([""] + self.questions)
             for id in self.part_ID:
                 writer.writerow([id] + self.code[id])
@@ -185,3 +191,7 @@ class Coder(toga.App):
 
 def main():
     return Coder("Coder", "coder.test", icon=None)
+
+
+if __name__ == "__main__":
+    main().main_loop()
