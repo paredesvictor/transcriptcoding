@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Briefcase-Version: 0.3.16
+Name: transcriptcoding
+Formal-Name: Transcript Coding
+App-ID: com.example.transcriptcoding
+Version: 0.0.1
+Home-page: https://example.com/transcriptcoding
+Download-URL: https://example.com/transcriptcoding
+Author: Victor Paredes
+Author-email: paredvic@gmail.com
+Summary: Code trancripts from directed interviews in a CSV format

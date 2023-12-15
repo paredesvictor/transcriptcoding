@@ -1,0 +1,174 @@
+Date/Time:       2023-12-14 15:11:34 
+Command line:    /Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/bin/briefcase package --adhoc-sign
+
+OS Release:      Darwin 23.2.0
+OS Version:      Darwin Kernel Version 23.2.0: Wed Nov 15 21:54:10 PST 2023; root:xnu-10002.61.3~2/RELEASE_X86_64
+Architecture:    x86_64
+Platform:        macOS-14.2-x86_64-i386-64bit
+
+Python exe:      /Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/bin/python3.12
+Python version:  3.12.0 (v3.12.0:0fb18b02c8, Oct  2 2023, 09:45:56) [Clang 13.0.0 (clang-1300.0.29.30)]
+Virtual env:     True
+Conda env:       False
+
+Briefcase:       0.3.16
+Target platform: macOS
+Target format:   app
+
+Environment Variables:
+    COLORTERM=truecolor
+    COMMAND_MODE=unix2003
+    DISPLAY=/private/tmp/com.apple.launchd.TvthwE9eNZ/org.xquartz:0
+    GIT_ASKPASS=********************
+    HOME=/Users/victorparedes
+    LANG=fr_FR.UTF-8
+    LOGNAME=victorparedes
+    MallocNanoZone=0
+    OLDPWD=/Users/victorparedes/Documents/Programation/python/analyse_transcriptions
+    ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+    PATH=/Users/victorparedes/.vscode/extensions/ms-python.python-2023.22.0/pythonFiles/deactivate/zsh:/Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/Users/victorparedes/.vscode/extensions/ms-python.python-2023.22.0/pythonFiles/deactivate/zsh:/Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/usr/local/munki:/Users/victorparedes/.vscode/extensions/ms-python.python-2023.22.0/pythonFiles/deactivate/zsh:/Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/bin
+    PS1=(venv) %n@%m %1~ %# 
+    PWD=/Users/victorparedes/Documents/Programation/python/analyse_transcriptions/transcriptcoding
+    SHELL=/bin/zsh
+    SHLVL=1
+    SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.h8iiWSaGMQ/Listeners
+    TERM=xterm-256color
+    TERM_PROGRAM=vscode
+    TERM_PROGRAM_VERSION=1.85.0
+    TMPDIR=/var/folders/k1/5brj4ky10rz4jymfn5q6mj3r0000gs/T/
+    USER=victorparedes
+    USER_ZDOTDIR=/Users/victorparedes
+    VIRTUAL_ENV=/Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv
+    VIRTUAL_ENV_PROMPT=(venv) 
+    VSCODE_GIT_ASKPASS_EXTRA_ARGS=********************
+    VSCODE_GIT_ASKPASS_MAIN=********************
+    VSCODE_GIT_ASKPASS_NODE=********************
+    VSCODE_GIT_IPC_HANDLE=/var/folders/k1/5brj4ky10rz4jymfn5q6mj3r0000gs/T/vscode-git-c44a81d356.sock
+    VSCODE_INJECTION=1
+    XPC_FLAGS=0x0
+    XPC_SERVICE_NAME=0
+    ZDOTDIR=/Users/victorparedes
+    _=/Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/bin/briefcase
+    __CFBundleIdentifier=com.microsoft.VSCode
+    __CF_USER_TEXT_ENCODING=0x1F9:0x0:0x1
+
+Briefcase Log:
+[15:11:34]                                                                                                                                                         subprocess.py:711
+           >>> Running Command:                                                                                                                                    subprocess.py:712
+           >>>     xcode-select --install                                                                                                                          subprocess.py:713
+           >>> Working Directory:                                                                                                                                  subprocess.py:720
+           >>>     /Users/victorparedes/Documents/Programation/python/analyse_transcriptions/transcriptcoding                                                      subprocess.py:721
+           >>> Command Output:                                                                                                                                     subprocess.py:737
+           >>>     xcode-select: note: install requested for command line developer tools                                                                          subprocess.py:739
+           >>> Return code: 0                                                                                                                                      subprocess.py:748
+                                                                                                                                                                      __main__.py:40
+           The command line developer tools are not installed.                                                                                                        __main__.py:41
+                                                                                                                                                                      __main__.py:41
+           You should be shown a dialog prompting you to install them. Select "Install"                                                                               __main__.py:41
+           to continue, and re-run Briefcase once that installation is complete.                                                                                      __main__.py:41
+
+Main thread traceback:
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ /Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/lib/python3.12/site-packages/briefcase/__main__.py:25 in main                                     │
+│                                                                                                                                                                                  │
+│   22 │   │   command = Command(logger=logger, console=console)                                                                                                                   │
+│   23 │   │   options = command.parse_options(extra=extra_cmdline)                                                                                                                │
+│   24 │   │   command.parse_config(Path.cwd() / "pyproject.toml")                                                                                                                 │
+│ ❱ 25 │   │   command(**options)                                                                                                                                                  │
+│   26 │   except HelpText as e:                                                                                                                                                   │
+│   27 │   │   logger.info()                                                                                                                                                       │
+│   28 │   │   logger.info(str(e))                                                                                                                                                 │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────────────────────╮ │
+│ │       command = <briefcase.platforms.macOS.app.macOSAppPackageCommand object at 0x10ca9ef90>                                                                                 │ │
+│ │       Command = <class 'briefcase.platforms.macOS.app.macOSAppPackageCommand'>                                                                                               │ │
+│ │       console = <briefcase.console.Console object at 0x10c9b1430>                                                                                                            │ │
+│ │             e = BriefcaseCommandError('The command line developer tools are not installed.\n\nYou should be shown a dialog prompting you to install them. Select             │ │
+│ │                 "Install"\nto continue, and re-run Briefcase once that installation is complete.\n')                                                                         │ │
+│ │ extra_cmdline = ['--adhoc-sign']                                                                                                                                             │ │
+│ │        logger = <briefcase.console.Log object at 0x10e086ea0>                                                                                                                │ │
+│ │       options = {'update': False, 'packaging_format': 'dmg', 'adhoc_sign': True, 'identity': None, 'notarize_app': None}                                                     │ │
+│ │        result = 200                                                                                                                                                          │ │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│                                                                                                                                                                                  │
+│ /Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/lib/python3.12/site-packages/briefcase/commands/package.py:144 in __call__                        │
+│                                                                                                                                                                                  │
+│   141 │   ) -> dict | None:                                                                                                                                                      │
+│   142 │   │   # Confirm host compatibility, that all required tools are available,                                                                                               │
+│   143 │   │   # and that the app configuration is finalized.                                                                                                                     │
+│ ❱ 144 │   │   self.finalize(app)                                                                                                                                                 │
+│   145 │   │                                                                                                                                                                      │
+│   146 │   │   if app:                                                                                                                                                            │
+│   147 │   │   │   state = self._package_app(app, update=update, **options)                                                                                                       │
+│                                                                                                                                                                                  │
+│ ╭───────────────────────────────────────────── locals ──────────────────────────────────────────────╮                                                                            │
+│ │     app = None                                                                                    │                                                                            │
+│ │ options = {'packaging_format': 'dmg', 'adhoc_sign': True, 'identity': None, 'notarize_app': None} │                                                                            │
+│ │    self = <briefcase.platforms.macOS.app.macOSAppPackageCommand object at 0x10ca9ef90>            │                                                                            │
+│ │  update = False                                                                                   │                                                                            │
+│ ╰───────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                            │
+│                                                                                                                                                                                  │
+│ /Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/lib/python3.12/site-packages/briefcase/commands/base.py:549 in finalize                           │
+│                                                                                                                                                                                  │
+│   546 │   │   │   to finalize. By default, all apps will be finalized.                                                                                                           │
+│   547 │   │   """                                                                                                                                                                │
+│   548 │   │   self.verify_host()                                                                                                                                                 │
+│ ❱ 549 │   │   self.verify_tools()                                                                                                                                                │
+│   550 │   │                                                                                                                                                                      │
+│   551 │   │   if app is None:                                                                                                                                                    │
+│   552 │   │   │   for app in self.apps.values():                                                                                                                                 │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────── locals ───────────────────────────────────────╮                                                                                          │
+│ │  app = None                                                                         │                                                                                          │
+│ │ self = <briefcase.platforms.macOS.app.macOSAppPackageCommand object at 0x10ca9ef90> │                                                                                          │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────╯                                                                                          │
+│                                                                                                                                                                                  │
+│ /Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/lib/python3.12/site-packages/briefcase/platforms/macOS/__init__.py:520 in verify_tools            │
+│                                                                                                                                                                                  │
+│   517 │                                                                                                                                                                          │
+│   518 │   def verify_tools(self):                                                                                                                                                │
+│   519 │   │   # Require the Xcode command line tools.                                                                                                                            │
+│ ❱ 520 │   │   XcodeCliTools.verify(tools=self.tools)                                                                                                                             │
+│   521 │   │                                                                                                                                                                      │
+│   522 │   │   # Verify superclass tools *after* xcode. This ensures we get the                                                                                                   │
+│   523 │   │   # git check *after* the xcode check.                                                                                                                               │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────── locals ───────────────────────────────────────╮                                                                                          │
+│ │ self = <briefcase.platforms.macOS.app.macOSAppPackageCommand object at 0x10ca9ef90> │                                                                                          │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────╯                                                                                          │
+│                                                                                                                                                                                  │
+│ /Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/lib/python3.12/site-packages/briefcase/integrations/base.py:77 in verify                          │
+│                                                                                                                                                                                  │
+│    74 │   ) -> ToolT:                                                                          ╭──────────────────────────────── locals ────────────────────────────────╮        │
+│    75 │   │   """Confirm the tool is available and usable on the host platform."""             │    app = None                                                          │        │
+│    76 │   │   cls.verify_host(tools=tools)                                                     │    cls = <class 'briefcase.integrations.xcode.XcodeCliTools'>          │        │
+│ ❱  77 │   │   tool = cls.verify_install(tools=tools, app=app, **kwargs)                        │ kwargs = {}                                                            │        │
+│    78 │   │   return tool                                                                      │  tools = <briefcase.integrations.base.ToolCache object at 0x10e45ac60> │        │
+│    79 │                                                                                        ╰────────────────────────────────────────────────────────────────────────╯        │
+│    80 │   @classmethod                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ /Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/lib/python3.12/site-packages/briefcase/integrations/xcode.py:226 in verify_install                │
+│                                                                                                                                                                                  │
+│   223 │   │   if hasattr(tools, "xcode_cli"):                                                  ╭──────────────────────────────── locals ────────────────────────────────╮        │
+│   224 │   │   │   return tools.xcode_cli                                                       │    cls = <class 'briefcase.integrations.xcode.XcodeCliTools'>          │        │
+│   225 │   │                                                                                    │ kwargs = {'app': None}                                                 │        │
+│ ❱ 226 │   │   cls.ensure_command_line_tools_are_installed(tools=tools)                         │  tools = <briefcase.integrations.base.ToolCache object at 0x10e45ac60> │        │
+│   227 │   │   cls.confirm_xcode_license_accepted(tools=tools)                                  ╰────────────────────────────────────────────────────────────────────────╯        │
+│   228 │   │                                                                                                                                                                      │
+│   229 │   │   tools.xcode_cli = XcodeCliTools(tools=tools)                                                                                                                       │
+│                                                                                                                                                                                  │
+│ /Users/victorparedes/Documents/Programation/python/analyse_transcriptions/venv/lib/python3.12/site-packages/briefcase/integrations/xcode.py:254 in ensure_command_line_tools_are │
+│                                                                                                                                                                                  │
+│   251 │   │   # Any other status code is a problem.                                            ╭─────────────────────────────── locals ────────────────────────────────╮         │
+│   252 │   │   try:                                                                             │   cls = <class 'briefcase.integrations.xcode.XcodeCliTools'>          │         │
+│   253 │   │   │   tools.subprocess.check_output(["xcode-select", "--install"])                 │ tools = <briefcase.integrations.base.ToolCache object at 0x10e45ac60> │         │
+│ ❱ 254 │   │   │   raise BriefcaseCommandError(                                                 ╰───────────────────────────────────────────────────────────────────────╯         │
+│   255 │   │   │   │   """\                                                                                                                                                       │
+│   256 The command line developer tools are not installed.                                                                                                                        │
+│   257                                                                                                                                                                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+BriefcaseCommandError: The command line developer tools are not installed.
+
+You should be shown a dialog prompting you to install them. Select "Install"
+to continue, and re-run Briefcase once that installation is complete.
+
