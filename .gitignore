@@ -1,2 +1,4 @@
 build
 dist
+**/__pycache__/**
+example/transcript_codes.csv
