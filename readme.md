@@ -1,3 +1,11 @@
-Install all dependencies with:
+# Transcript Coding
+This application allows the coding of transcripts of guided interviews recorded in CSV format.
 
-pip install -r Requirements.txt
+## Install
+### App installation for MacOS
+Install the app using the package in the *dist* folder.
+
+### OR Run with Python (3.7+)
+Install all dependencies with: ```pip install -r Requirements.txt```
+
+and execute the code: ```python3 ./src/transcriptcoding/__main__.py```.
