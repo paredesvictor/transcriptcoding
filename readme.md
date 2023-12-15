@@ -3,7 +3,7 @@ This application allows the coding of transcripts of guided interviews recorded 
 
 ## Install
 ### App installation for MacOS
-Install the app from the latest [release.](https://github.com/paredesvictor/transcriptcoding/releases)
+Install the app from the latest [release](https://github.com/paredesvictor/transcriptcoding/releases).
 
 ### OR Run with Python (3.7+)
 Afer cloning this directory:
